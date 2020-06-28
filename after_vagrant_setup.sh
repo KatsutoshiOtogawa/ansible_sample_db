@@ -45,7 +45,5 @@ vagrant ssh-config  --host ${ssh_config_host}_ansible |
     sed "s/User $loginuser/User ansible/" |
     sed -E "s|IdentityFile .*$|IdentityFile ./.ssh/$secret_key|" >> ./.ssh/config
 
-ansible-galaxy install -r requirements.yml -p ./roles
-
 # ansible 
 ansible-vault encrypt $password_file
